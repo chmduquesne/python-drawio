@@ -17,7 +17,7 @@ INSTALL_REQUIRES    = ['networkx']
 
 
 def git_tag():
-    tag = os.getenv('TRAVIS_TAG')
+    tag = os.getenv('GITHUB_REF_NAME')
     if not tag:
         tag = subprocess.check_output(
                 'git describe --abbrev=0'.split(' ')
