@@ -11,7 +11,7 @@ jobs:
       with:
         python-version: 3.9
     - name: Build a binary wheel and a source tarball
-      run: python setup.py sdist bdist_wheel
+      run: python3 setup.py sdist bdist_wheel
     - name: Publish distribution 📦 to Test PyPI
       uses: pypa/gh-action-pypi-publish@master
       with:
