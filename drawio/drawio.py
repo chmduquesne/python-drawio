@@ -80,7 +80,7 @@ def write_graph(g, f):
         for i, e in enumerate(g.edges(node, data=True)):
             data = e[2]
             j = es.index(data.get("style", "-"))
-            refs[j*n+i] = e[1]
+            refs[j*n+i] = f"{e[1]}"
             labels[i] = data.get("label", "-")
 
         f.write(','.join([f"{node}", label, tags, style, width, height, link] + refs + labels) + "\n")
