@@ -79,7 +79,7 @@ def write_graph(g, f):
         labels = ["-"] * n
         for i, e in enumerate(g.edges(node, data=True)):
             data = e[2]
-            j = es.index(data["style"])
+            j = es.index(data.get("style", "-"))
             refs[j*n+i] = e[1]
             labels[i] = data.get("label", "-")
 
