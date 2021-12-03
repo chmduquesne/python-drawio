@@ -16,7 +16,10 @@ def edge_styles(g):
     """
     styles = set()
     for e in g.edges(data="style"):
-        styles.add(e[2])
+        style = "-"
+        if e[2] is not None:
+            style = e[2]
+        styles.add(style)
     return sorted(list(styles))
 
 
