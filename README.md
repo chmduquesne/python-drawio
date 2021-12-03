@@ -1,7 +1,4 @@
-# python-drawio
+# drawio
 A library to draw networkx graphs with diagrams.net
 
-Formerly known as draw.io, diagrams.net offers an opensource interface to
-plot graphs. It also happens to offer a convenient way to describe graphs
-in csv files. This library offers a way to create such csv files in a
-programmatic fashion.
+<iframe frameborder="0" style="width:100%;height:243px;" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1#R3VjbctowEP0aPzZjyxfgsUDSZKadzpR0kjwKe31phdcVAux%2BfQWWsD1KKJ0xAfpk7dldWTp7dLEtd7IoP3FapF8wAmYROyotd2oR4njOSD62SFUjA8%2BpgYRnkQpqgFn2GxRoK3SVRbDsBApEJrKiC4aY5xCKDkY5x003LEbWfWtBEzCAWUiZiT5lkUhrdOjbDX4PWZLqNzu28iyoDlbAMqURblqQe2u5E44o6tainADbkqd5qfPu3vDuB8YhF8ck2NVj8fDMR5O7%2B%2FnjrwKcOX7%2F4Na9rClbqQmrwYpKM8BxlUew7cS23DFykWKCOWWfEQsJOhL8AUJUqnZ0JVBCqVgw5a17hMgguhm5gpa44iEcGK5WAOUJiANxZM%2BvFCbgAgSvZB4HRkW27o6DKoUk%2B7iGRNlQPP4Dp47B6dQgVXYjFSyN8SbNBMwKupv3Ri6iLnl0WdSyjrNyW4RxnDE2QYZ815EbxxCEocSXguNPaHmiwWhu23v%2B18AFlIcrYDKmEoZKw2oREy3yTWtJKChtrQaN9U6xf12yJUfK1junbInB6bdrly3xLky3g%2BvSrXekboNz6tYzOP147br17AvTLTHPtP6FG2MulJPY%2FQo5OPbeYL9el%2FdRcmCQ%2FHTtSvaDS1PysH%2FhQpmJ51b7RXW1bU%2FLtlFpI5dzeW4bu5wbX5tN2s7SeSdcIvoz5e9r5Ly3lNH71M85WL%2BLqMNZT109zNZmdXPCzWoYwuub1Xzoe35Pm9WAXNpmZd5tHk55IsTkjRMhmAd%2B0NOnpN8l2SHnJtk8dr%2F%2BbyTv2eufZGk2%2F7B2vtafQPf2Dw%3D%3D"></iframe>
