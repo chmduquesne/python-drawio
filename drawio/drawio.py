@@ -83,7 +83,7 @@ def write_graph(g, f):
             refs[j*n+i] = e[1]
             labels[i] = data.get("label", "-")
 
-        f.write(','.join([node, label, tags, style, width, height, link] + refs + labels) + "\n")
+        f.write(','.join([f"{node}", label, tags, style, width, height, link] + refs + labels) + "\n")
 
 
 
