@@ -1,5 +1,47 @@
 # drawio
 A library to draw networkx graphs with diagrams.net
 
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2021-12-06T08:47:49.350Z\&quot; agent=\&quot;5.0 (X11)\&quot; etag=\&quot;oLTHWBWYXQH_wNmN7U5f\&quot; version=\&quot;15.8.8\&quot;&gt;&lt;diagram id=\&quot;EERs_Ic5sEJ4O4i5pFXd\&quot; name=\&quot;Page-1\&quot;&gt;3VjbctowEP0aPzZjyxfgsUDSZKadzpR0kjwKe31phdcVAux+fQWWsD1KKJ0xAfpk7dldWTp7dLEtd7IoP3FapF8wAmYROyotd2oR4njOSD62SFUjA8+pgYRnkQpqgFn2GxRoK3SVRbDsBApEJrKiC4aY5xCKDkY5x003LEbWfWtBEzCAWUiZiT5lkUhrdOjbDX4PWZLqNzu28iyoDlbAMqURblqQe2u5E44o6tainADbkqd5qfPu3vDuB8YhF8ck2NVj8fDMR5O7+/njrwKcOX7/4Na9rClbqQmrwYpKM8BxlUew7cS23DFykWKCOWWfEQsJOhL8AUJUqnZ0JVBCqVgw5a17hMgguhm5gpa44iEcGK5WAOUJiANxZM+vFCbgAgSvZB4HRkW27o6DKoUk+7iGRNlQPP4Dp47B6dQgVXYjFSyN8SbNBMwKupv3Ri6iLnl0WdSyjrNyW4RxnDE2QYZ815EbxxCEocSXguNPaHmiwWhu23v+18AFlIcrYDKmEoZKw2oREy3yTWtJKChtrQaN9U6xf12yJUfK1junbInB6bdrly3xLky3g+vSrXekboNz6tYzOP147br17AvTLTHPtP6FG2MulJPY/Qo5OPbeYL9el/dRcmCQ/HTtSvaDS1PysH/hQpmJ51b7RXW1bU/LtlFpI5dzeW4bu5wbX5tN2s7SeSdcIvoz5e9r5Ly3lNH71M85WL+LqMNZT109zNZmdXPCzWoYwuub1Xzoe35Pm9WAXNpmZd5tHk55IsTkjRMhmAd+0NOnpN8l2SHnJtk8dr/+byTv2eufZGk2/7B2vtafQPf2Dw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+# Documentation
+
+This library generates graphs using the [csv
+API](https://drawio-app.com/import-from-csv-to-drawio/).
+
+## Usage
+
+```python
+import networkx as nx
+import drawio
+import sys
+
+g = nx.gn_graph(10)
+drawio.write(g, sys.stdout)
+```
+
+This will print
+
+```csv
+# identity: nodeid
+# label: %label%
+# style: %style%
+# link: url
+# width: @width
+# height: @height
+# layout: verticalflow
+# ignore: nodeid,style,height,width,ref_0_0,ref_1_0,ref_2_0,ref_3_0,ref_4_0,label_0,label_1,label_2,label_3,label_4
+# connect: {"from": "ref_0_0", "to": "nodeid", "fromlabel": "label_0", "style": "-"}
+# connect: {"from": "ref_1_0", "to": "nodeid", "fromlabel": "label_1", "style": "-"}
+# connect: {"from": "ref_2_0", "to": "nodeid", "fromlabel": "label_2", "style": "-"}
+# connect: {"from": "ref_3_0", "to": "nodeid", "fromlabel": "label_3", "style": "-"}
+# connect: {"from": "ref_4_0", "to": "nodeid", "fromlabel": "label_4", "style": "-"}
+nodeid,label,tags,style,width,height,link,ref_0_0,ref_1_0,ref_2_0,ref_3_0,ref_4_0,label_0,label_1,label_2,label_3,label_4
+0,-,-,-,auto,auto,-,-,-,-,-,-,-,-,-,-,-
+1,-,-,-,auto,auto,-,0,-,-,-,-,-,-,-,-,-
+2,-,-,-,auto,auto,-,1,-,-,-,-,-,-,-,-,-
+3,-,-,-,auto,auto,-,1,-,-,-,-,-,-,-,-,-
+4,-,-,-,auto,auto,-,0,-,-,-,-,-,-,-,-,-
+5,-,-,-,auto,auto,-,4,-,-,-,-,-,-,-,-,-
+6,-,-,-,auto,auto,-,0,-,-,-,-,-,-,-,-,-
+7,-,-,-,auto,auto,-,0,-,-,-,-,-,-,-,-,-
+8,-,-,-,auto,auto,-,0,-,-,-,-,-,-,-,-,-
+9,-,-,-,auto,auto,-,5,-,-,-,-,-,-,-,-,-
+```
